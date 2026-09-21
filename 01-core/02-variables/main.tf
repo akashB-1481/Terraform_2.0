@@ -11,6 +11,8 @@ provider "local" {}
 resource "local_file" "environment" {
   filename = "./environment.txt"
 
-  content = "Environment: ${var.environment}"
+  content = <<-EOT
+    Environment: ${var.environment}
+    Owner: ${var.owner}
+  EOT
 }
-
