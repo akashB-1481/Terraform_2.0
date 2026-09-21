@@ -13,3 +13,4 @@ resource "local_file" "environment" {
 
   content = "Environment: ${var.environment}"
 }
+
